@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxws:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+                xmlns:jaxws="http://java.sun.com/xml/ns/jaxws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                wsdlLocation="./calculator.wsdl">
+
+    <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+
+    <jaxws:bindings wsdlLocation="./calculator.wsdl">
+        <jaxws:package name="io.github.chet20r.ws.client" />
+        <jaxws:enableAsyncMapping>false</jaxws:enableAsyncMapping>
+        <jaxb:globalBindings generateElementProperty="false"></jaxb:globalBindings>
+    </jaxws:bindings>
+
+    <jaxws:bindings
+            node="wsdl:definitions/wsdl:types/xsd:schema[@targetNamespace='http://tempuri.org/']">
+        <jaxb:schemaBindings>
+            <jaxb:package name="io.github.chet20r.ws.client.tempuri"/>
+        </jaxb:schemaBindings>
+        <jaxb:globalBindings generateElementProperty="false"></jaxb:globalBindings>
+    </jaxws:bindings>
+
+
+</jaxws:bindings>
