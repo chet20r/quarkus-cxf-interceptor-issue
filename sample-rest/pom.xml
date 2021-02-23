@@ -58,11 +58,22 @@
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>quarkus-build</id>
                         <goals>
                             <goal>build</goal>
                             <goal>generate-code</goal>
                             <goal>generate-code-tests</goal>
                         </goals>
+                    </execution>
+                    <execution>
+                        <id>native-build</id>
+                        <goals>
+                            <goal>native-image</goal>
+                        </goals>
+                        <configuration>
+                            <enableHttpUrlHandler>true</enableHttpUrlHandler>
+                            <additionalBuildArgs>--report-unsupported-elements-at-runtime</additionalBuildArgs>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -79,7 +90,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
