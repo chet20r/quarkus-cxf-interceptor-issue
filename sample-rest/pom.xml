@@ -65,16 +65,6 @@
                             <goal>generate-code-tests</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>native-build</id>
-                        <goals>
-                            <goal>native-image</goal>
-                        </goals>
-                        <configuration>
-                            <enableHttpUrlHandler>true</enableHttpUrlHandler>
-                            <additionalBuildArgs>--report-unsupported-elements-at-runtime</additionalBuildArgs>
-                        </configuration>
-                    </execution>
                 </executions>
             </plugin>
 
@@ -104,6 +94,20 @@
             <build>
                 <plugins>
                     <plugin>
+                        <groupId>io.quarkus</groupId>
+                        <artifactId>quarkus-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>native-image</goal>
+                                </goals>
+                                <configuration>
+                                    <enableHttpUrlHandler>true</enableHttpUrlHandler>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <executions>
                             <execution>
@@ -128,6 +132,7 @@
             </build>
             <properties>
                 <quarkus.package.type>native</quarkus.package.type>
+                <quarkus.native.additional-build-args>--report-unsupported-elements-at-runtime</quarkus.native.additional-build-args>
             </properties>
         </profile>
     </profiles>

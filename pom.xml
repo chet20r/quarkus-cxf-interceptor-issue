@@ -37,7 +37,7 @@
 
         <quarkus.platform.version>1.11.2.Final</quarkus.platform.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
-        <quarkus-plugin.version>1.11.1.Final</quarkus-plugin.version>
+        <quarkus-plugin.version>1.11.2.Final</quarkus-plugin.version>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
 
         <quarkus-cxf.version>0.4</quarkus-cxf.version>
