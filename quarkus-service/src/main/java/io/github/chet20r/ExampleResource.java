@@ -5,6 +5,7 @@ import io.github.chet20r.ws.client.tempuri.Add;
 import io.github.chet20r.ws.client.tempuri.AddResponse;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,6 +18,7 @@ import javax.ws.rs.core.MediaType;
 public class ExampleResource {
 
     @Inject
+    @Named("calculatorProxy")
     CalculatorSoap soapClient;
 
     @GET
