@@ -1,5 +1,6 @@
 package io.github.chet20r;
 
+import io.github.chet20r.service.MyCalculatorServiceInterface;
 import io.github.chet20r.ws.client.CalculatorSoap;
 import io.github.chet20r.ws.client.tempuri.Add;
 import io.github.chet20r.ws.client.tempuri.AddResponse;
@@ -18,8 +19,7 @@ import javax.ws.rs.core.MediaType;
 public class ExampleResource {
 
     @Inject
-    @Named("calculatorProxy")
-    CalculatorSoap soapClient;
+    MyCalculatorServiceInterface soapClient;
 
     @GET
     public AddResponse hello() {

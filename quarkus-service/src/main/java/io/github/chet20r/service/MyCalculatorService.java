@@ -6,10 +6,10 @@ import io.github.chet20r.ws.client.tempuri.*;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.jws.WebService;
 
-@ApplicationScoped
-@Named("calculatorProxy")
-public class MyCalculatorService implements CalculatorSoap {
+@WebService(endpointInterface = "io.github.chet20r.service.MyCalculatorServiceInterface")
+public class MyCalculatorService implements MyCalculatorServiceInterface {
     private static final String METHOD_NOT_IMPLEMENTED = "Method not implemented";
 
     @Inject
