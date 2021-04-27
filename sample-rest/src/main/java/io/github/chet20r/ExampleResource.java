@@ -18,7 +18,7 @@ import java.util.Map;
 @Produces(MediaType.APPLICATION_JSON)
 public class ExampleResource {
 
-    @Inject
+    /*@Inject
     CalculatorSoap soapClient;
 
     @GET
@@ -28,7 +28,7 @@ public class ExampleResource {
         add.setIntA(1);
         add.setIntB(2);
         return soapClient.add(add);
-    }
+    }*/
 
     @GET
     public Map<String, String> hello() {

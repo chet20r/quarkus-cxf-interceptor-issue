@@ -35,9 +35,9 @@
         <shade-plugin.version>3.2.2</shade-plugin.version>
         <jandex.version>1.0.8</jandex.version>
 
-        <quarkus.platform.version>1.11.2.Final</quarkus.platform.version>
+        <quarkus.platform.version>1.13.2.Final</quarkus.platform.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
-        <quarkus-plugin.version>1.11.2.Final</quarkus-plugin.version>
+        <quarkus-plugin.version>1.13.2.Final</quarkus-plugin.version>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
 
         <quarkus-cxf.version>0.4</quarkus-cxf.version>
